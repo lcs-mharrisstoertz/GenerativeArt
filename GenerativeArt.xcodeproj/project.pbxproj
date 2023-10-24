@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC7662FF2AE8261E004F3967 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7662FE2AE8261E004F3967 /* Shape.swift */; };
 		CCCE120A2AE81A95006991BA /* GenerativeArtApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCCE12092AE81A95006991BA /* GenerativeArtApp.swift */; };
 		CCCE120E2AE81A9D006991BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCCE120D2AE81A9D006991BA /* Assets.xcassets */; };
 		CCCE12112AE81A9D006991BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCCE12102AE81A9D006991BA /* Preview Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC7662FE2AE8261E004F3967 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		CCCE12062AE81A95006991BA /* GenerativeArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GenerativeArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCCE12092AE81A95006991BA /* GenerativeArtApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerativeArtApp.swift; sourceTree = "<group>"; };
 		CCCE120D2AE81A9D006991BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC7662FD2AE825EC004F3967 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CC7662FE2AE8261E004F3967 /* Shape.swift */,
+			);
+			path = helpers;
+			sourceTree = "<group>";
+		};
 		CCCE11FD2AE81A95006991BA = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				CCCE12092AE81A95006991BA /* GenerativeArtApp.swift */,
+				CC7662FD2AE825EC004F3967 /* helpers */,
 				CCCE12182AE81CE7006991BA /* Views */,
 				CCCE120D2AE81A9D006991BA /* Assets.xcassets */,
 				CCCE12122AE81A9D006991BA /* GenerativeArt.entitlements */,
@@ -153,6 +164,7 @@
 				CCCE121B2AE81D35006991BA /* TileView.swift in Sources */,
 				CCCE121E2AE81D56006991BA /* MosaicViews.swift in Sources */,
 				CCCE120A2AE81A95006991BA /* GenerativeArtApp.swift in Sources */,
+				CC7662FF2AE8261E004F3967 /* Shape.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

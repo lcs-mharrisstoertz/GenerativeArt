@@ -7,12 +7,17 @@
 
 import SwiftUI
 
+
 struct TileView: View {
     var body: some View {
         VStack {
-            Rectangle()
+            TriangleTopRight()
             //make shape a square
                 .aspectRatio(1.0, contentMode: .fit)
+            
+            TriangleBottomLeft()
+                .aspectRatio(1.0, contentMode: .fit)
+            
         }
         .padding()
     }
