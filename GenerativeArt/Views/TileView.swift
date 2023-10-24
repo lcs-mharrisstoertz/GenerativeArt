@@ -8,15 +8,27 @@
 import SwiftUI
 
 
+//MARK: stored properties
+let flipOne = Int.random(in: 1...2)
+
+
+//MARK: Computed properties
+
 struct TileView: View {
     var body: some View {
-        VStack {
-            TriangleTopRight()
-            //make shape a square
-                .aspectRatio(1.0, contentMode: .fit)
+        ZStack {
+            if flipOne == 1 {
+                TriangleTopRight()
+                //make shape a square
+                    .aspectRatio(1.0, contentMode: .fit)
+                
+                TriangleBottomLeft()
+                    .aspectRatio(1.0, contentMode: .fit)
+            } else {
+                //insert other two triangles
+            }
             
-            TriangleBottomLeft()
-                .aspectRatio(1.0, contentMode: .fit)
+           
             
         }
         .padding()
