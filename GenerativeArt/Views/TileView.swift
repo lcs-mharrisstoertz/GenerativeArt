@@ -9,7 +9,7 @@ import SwiftUI
 
 
 //MARK: stored properties
-let flipOne = Int.random(in: 1...2)
+let flipOne = Coin.flip()
 
 
 //MARK: Computed properties
@@ -17,15 +17,27 @@ let flipOne = Int.random(in: 1...2)
 struct TileView: View {
     var body: some View {
         ZStack {
-            if flipOne == 1 {
+            if flipOne == .heads {
                 TriangleTopRight()
                 //make shape a square
+                    .fill(.black)
                     .aspectRatio(1.0, contentMode: .fit)
+                    
                 
                 TriangleBottomLeft()
+                    .fill(.red)
                     .aspectRatio(1.0, contentMode: .fit)
             } else {
-                //insert other two triangles
+                
+                TriangleTopLeft()
+                //make shape a square
+                    .fill(.black)
+                    .aspectRatio(1.0, contentMode: .fit)
+                
+                TriangleBottomRight()
+                    .fill(.red)
+                    .aspectRatio(1.0, contentMode: .fit)
+                
             }
             
            
