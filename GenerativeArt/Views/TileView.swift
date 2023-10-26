@@ -12,11 +12,30 @@ import SwiftUI
 let flipOne = Coin.flip()
 
 //choose my markers
-let markerOne = Color.pink
+let markerOne = Color.indigo
 let markerTwo = Color.mint
 
+//flip for color
+let flipForColor = Coin.flip()
 
 //MARK: Computed properties
+
+//set colors based on the coin flip
+var colorOne: Color{
+    if flipForColor == .heads {
+        return markerOne
+    } else {
+        return markerTwo
+    }
+}
+
+var colorTwo: Color{
+    if flipForColor == .heads {
+            return markerTwo
+        } else {
+            return markerOne
+        }
+    }
 
 struct TileView: View {
     var body: some View {
@@ -24,12 +43,12 @@ struct TileView: View {
             if flipOne == .heads {
                 TriangleTopRight()
                 //make shape a square
-                    .fill(.yellow)
+                    .fill(colorOne)
                     .aspectRatio(1.0, contentMode: .fit)
                     
                 
                 TriangleBottomLeft()
-                    .fill(.red)
+                    .fill(colorTwo)
                     .aspectRatio(1.0, contentMode: .fit)
             } else {
                 
