@@ -16,6 +16,8 @@ let flipOne = Coin.flip()
 //determine the top and bottom colors
 let flipTwo = Coin.flip()
 
+//determine final fill color
+let flipThree = Coin.flip()
 
 
 //choose my markers
@@ -35,6 +37,15 @@ var colorOne: Color{
 var colorTwo: Color{
     return flipForColor == .heads ? markerTwo : markerOne
     }
+
+//final flip for determining remaining fill color
+var remainingTriangleFillColor: Color{
+    if flipThree == . heads {
+        return colorTwo
+    } else {
+        return .clear
+    }
+}
 
 struct TileView: View {
     var body: some View {
@@ -56,12 +67,12 @@ struct TileView: View {
                 TriangleTopLeft()
                 //make shape a square
                     .stroke(.black)
-                    .fill(flipTwo == .heads ? colorOne: .clear)
+                    .fill(flipTwo == .heads ? colorOne: remainingTriangleFillColor)
                     .aspectRatio(1.0, contentMode: .fit)
                 
                 TriangleBottomRight()
                     .stroke(.black)
-                    .fill(flipTwo == .tails ? colorOne : .clear)
+                    .fill(flipTwo == .tails ? colorOne : remainingTriangleFillColor)
                     .aspectRatio(1.0, contentMode: .fit)
                 
             }
