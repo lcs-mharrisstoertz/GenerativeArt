@@ -9,7 +9,14 @@ import SwiftUI
 
 
 //MARK: stored properties
+
+//determine diagonal direction
 let flipOne = Coin.flip()
+
+//determine the top and bottom colors
+let flipTwo = Coin.flip()
+
+
 
 //choose my markers
 let markerOne = Color.indigo
@@ -35,22 +42,26 @@ struct TileView: View {
             if flipOne == .heads {
                 TriangleTopRight()
                 //make shape a square
-                    .fill(colorOne)
+                    .stroke(.black)
+                    .fill(flipTwo == .heads ? colorOne : .clear)
                     .aspectRatio(1.0, contentMode: .fit)
                     
                 
                 TriangleBottomLeft()
-                    .fill(colorTwo)
+                    .stroke(.black)
+                    .fill(flipTwo == .tails ? colorOne : .clear )
                     .aspectRatio(1.0, contentMode: .fit)
             } else {
                 
                 TriangleTopLeft()
                 //make shape a square
-                    .fill(.black)
+                    .stroke(.black)
+                    .fill(flipTwo == .heads ? colorOne: .clear)
                     .aspectRatio(1.0, contentMode: .fit)
                 
                 TriangleBottomRight()
-                    .fill(.red)
+                    .stroke(.black)
+                    .fill(flipTwo == .tails ? colorOne : .clear)
                     .aspectRatio(1.0, contentMode: .fit)
                 
             }
