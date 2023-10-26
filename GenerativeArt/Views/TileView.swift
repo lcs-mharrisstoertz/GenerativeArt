@@ -11,6 +11,10 @@ import SwiftUI
 //MARK: stored properties
 let flipOne = Coin.flip()
 
+//choose my markers
+let markerOne = Color.pink
+let markerTwo = Color.mint
+
 
 //MARK: Computed properties
 
@@ -20,7 +24,7 @@ struct TileView: View {
             if flipOne == .heads {
                 TriangleTopRight()
                 //make shape a square
-                    .fill(.black)
+                    .fill(.yellow)
                     .aspectRatio(1.0, contentMode: .fit)
                     
                 
