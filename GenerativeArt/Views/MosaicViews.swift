@@ -9,8 +9,8 @@ import SwiftUI
 
 struct MosaicViews: View {
     //MARK: Stored properties
-    let columns = 7
-    let rows = 4
+    @State var columns = 7.0
+    @State var rows = 4
     
     //MARK: Computed properties
     var body: some View {
@@ -19,18 +19,19 @@ struct MosaicViews: View {
                 
                 //number of rows
                 ForEach(0..<rows, id:\.self) { J in
-                        GridRow{
-                            
-                            //reapeats in a row (colums)
-                            ForEach(0..<columns, id: \.self) { i in
-                                TileView()
-                            }
+                    GridRow{
+                        
+                        //reapeats in a row (colums)
+                        ForEach(0..<Int(columns), id: \.self) { i in
+                            TileView()
                         }
                     }
-              
+                }
+                
             }
-            
         }
+        
+        Slider(value: $columns, in: 1...10, step: 1.0)
     }
 }
 
