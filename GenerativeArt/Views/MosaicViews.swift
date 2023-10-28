@@ -10,22 +10,18 @@ import SwiftUI
 struct MosaicViews: View {
     var body: some View {
         Grid(horizontalSpacing: 0, verticalSpacing: 0){
-            GridRow{
-                
-                ForEach(1..<4) { i in
-                  TileView()
+            
+            //number of rows
+                ForEach(1..<5) { J in
+                    GridRow{
+                        
+                        //reapeats in a row (coloums)
+                        ForEach(1..<5) { i in
+                            TileView()
+                        }
+                    }
                 }
-            }
-            GridRow{
-                ForEach(1..<4) { i in
-                    TileView()
-                }
-            }
-            GridRow{
-                ForEach(1..<4) { i in
-                    TileView()
-                }
-            }
+          
         }
     }
 }
